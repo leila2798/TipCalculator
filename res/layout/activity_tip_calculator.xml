@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalculatorActivity" >
+    
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin" >
+    
+	    <TextView
+        android:id="@+id/edtBillAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/textSize"
+        android:text="@string/edtBillAmountLabel" />
+	    
+	    <EditText android:id="@+id/edtBillAmount"
+        android:inputType="numberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/edtBillAmount_marginLeft"
+        android:ems="10"
+        android:layout_toRightOf="@+id/edtBillAmountLabel"
+        android:hint="@string/edtBillAmount" />
+	    
+	    <requestFocus />
+	    
+    </RelativeLayout>
+    
+    <CheckBox android:id="@+id/chkRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/chkRound_margin"
+        android:layout_marginBottom="@dimen/chkRound_margin"
+        android:text="@string/chkRound"/>
+        
+    <Button android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnCalculate"
+        android:onClick="calculateTip" />
+    
+    <TextView
+        android:id="@+id/txtTipResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:layout_marginTop="@dimen/txtTipResult_marginTop"
+        android:text="@string/txtTipResult" />
+
+</LinearLayout>
