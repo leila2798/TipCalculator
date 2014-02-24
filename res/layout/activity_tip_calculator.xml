@@ -56,5 +56,15 @@
         android:textSize="@dimen/textSize"
         android:layout_marginTop="@dimen/txtTipResult_marginTop"
         android:text="@string/txtTipResult" />
+    
+    <TextView
+        android:id="@+id/txtErrorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:layout_marginTop="@dimen/txtErrorMsg_margin"
+        android:visibility="gone"
+        android:textColor="#ff0000"
+        android:text="@string/txtErrorMsg" />
 
 </LinearLayout>

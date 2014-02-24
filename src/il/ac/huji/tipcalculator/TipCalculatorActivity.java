@@ -27,14 +27,21 @@ public class TipCalculatorActivity extends Activity {
 	
 	/** Called when the user clicks the Calculate button */
 	public void calculateTip(View view) {
+		TextView txtErrorMsg = (TextView) findViewById(R.id.txtErrorMsg);
+		txtErrorMsg.setVisibility(View.GONE);
 		EditText edtBillAmount = (EditText) findViewById(R.id.edtBillAmount);
-		double amount = Double.parseDouble(edtBillAmount.getText().toString());
-		CheckBox chkRound = (CheckBox) findViewById(R.id.chkRound);
-		boolean round = chkRound.isChecked();
-		TextView txtTipResult = (TextView) findViewById(R.id.txtTipResult);
-		DecimalFormat df = new DecimalFormat("#.##");
-		String tipResult = round? Integer.toString((int)Math.round(amount*0.12)): df.format(amount*0.12);
-		txtTipResult.setText("Tip: " + tipResult+"$");
+		try{
+			double amount = Double.parseDouble(edtBillAmount.getText().toString());
+			CheckBox chkRound = (CheckBox) findViewById(R.id.chkRound);
+			boolean round = chkRound.isChecked();
+			TextView txtTipResult = (TextView) findViewById(R.id.txtTipResult);
+			DecimalFormat df = new DecimalFormat("#.##");
+			String tipResult = round? Integer.toString((int)Math.round(amount*0.12)): df.format(amount*0.12);
+			txtTipResult.setText("Tip: " + tipResult+"$");
+		}
+		catch (Exception e){
+			txtErrorMsg.setVisibility(View.VISIBLE);
+			}
 	}
 
 }

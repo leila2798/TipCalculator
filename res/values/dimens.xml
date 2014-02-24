@@ -7,5 +7,6 @@
     <dimen name="chkRound_margin">20dp</dimen>
     <dimen name="txtTipResult_marginTop">50dp</dimen>
     <dimen name="textSize">18sp</dimen>
+    <dimen name="txtErrorMsg_margin">20dp</dimen>
 
 </resources>

@@ -8,5 +8,6 @@
     <string name="edtBillAmountLabel">Bill Amount</string>
     <string name="edtBillAmount">42.20</string>
     <string name="btnCalculate">Calculate</string>
+    <string name="txtErrorMsg">Please enter a valid tip amount</string>
 
 </resources>
